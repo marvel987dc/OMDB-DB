@@ -1,0 +1,21 @@
+        if(!title ) res.status(400).json({error: 'No title parameter'});
+
+In this line, I wrote an if condiitonal to check if  the title is not equal to 
+any title in the API it will display and status 400 that means is a bad request, 
+so, if the user try to prompt something that is no in the server it just marked
+ it as an error, displaying the string (No title parameter)
+
+
+         res.status(201).json(movie)
+This  line is to send the response back to the client with a status code 
+of 201, which means that the request was succesully created on the server
+
+
+        res.status(500).send({ error: "An error occurred while fetching favorites." });
+Here I rote inside the cath the res/status(500) in order to know when a error occurs inside the 'try' 
+sending a message to the user saying "An error occurred while fetching favorites." 
+
+
+        res.status(200).json({ message: 'Movie soft deleted successfully'});
+The status 200 in this case indicates that the soft delete has been successfully made 
+in the database, meaning that the information was successfully updated.
